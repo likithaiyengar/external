@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Clone Repo') {
             steps {
-                git branch: 'main', url: https://github.com/likithaiyengar/external.git'
+                git branch: 'main', url: https://github.com/likithaiyengar/external.git',
+                    credentialsId: 'github-creds'
             }
         }
 
